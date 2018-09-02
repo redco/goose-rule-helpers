@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "name": "goose-rule-helpers",
+  "repository": "redco/goose-rule-helpers",
+  "description": "This library helps to build goose-parser rules faster and cleaner",
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "goose",
+    "parser",
+    "rules",
+    "builder"
+  ],
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "eslint": "^3.13.1",
+    "eslint-config-airbnb-base": "^11.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^3.0.2",
+    "eslint-plugin-react": "^6.9.0",
+    "lint-staged": "^3.2.6",
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": "lint:staged",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "eslint --ignore-path .gitignore --fix .",
+    "lint:staged": "lint-staged"
+  }
+}
