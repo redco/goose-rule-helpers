@@ -1,6 +1,7 @@
 {
   "version": "1.0.0",
   "name": "goose-rule-helpers",
+  "private": true,
   "repository": "redco/goose-rule-helpers",
   "description": "This library helps to build goose-parser rules faster and cleaner",
   "license": "SEE LICENSE IN LICENSE",
@@ -11,7 +12,7 @@
     "builder"
   ],
   "dependencies": {
-
+    "babel-polyfill": "^6.23.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -25,7 +26,8 @@
     "eslint-plugin-jsx-a11y": "^3.0.2",
     "eslint-plugin-react": "^6.9.0",
     "lint-staged": "^3.2.6",
-    "pre-commit": "^1.2.2"
+    "pre-commit": "^1.2.2",
+    "rimraf": "^2.5.4"
   },
   "pre-commit": "lint:staged",
   "lint-staged": {
@@ -37,6 +39,7 @@
   "scripts": {
     "lint": "eslint --ignore-path .gitignore .",
     "lint:fix": "eslint --ignore-path .gitignore --fix .",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "build": "node build.js"
   }
 }
